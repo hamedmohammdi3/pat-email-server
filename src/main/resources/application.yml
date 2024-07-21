@@ -1,0 +1,48 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: email
+    password: hamed1223
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialact: org.hibernate.dialect.Oracle10gDialect
+#  data:
+#    mongodb:
+#      authentication-database: admin
+#      username: root
+#      password: root
+#      database: test_db
+#      port: 27017
+#      host: localhost
+
+
+
+logging:
+  file:
+    name: /home/mtoofan/logs/mailServerLog.log
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  level:
+    com.fanap.devops.rms.core.rmscore: DEBUG
+    org.springframework: ERROR
+    root: info
+  logback:
+    rollingpolicy:
+      max-history: 5
+      max-file-size: 5MB
+
+mail-server-config:
+  smtp-port: 145
+  imap-port: 152
+  pop-port: 122
+  admin-port: 12
+  smtp-msa-port: 12
+  host-name: 'pat.ir'

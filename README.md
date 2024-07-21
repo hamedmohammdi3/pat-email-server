@@ -1,0 +1,13 @@
+--host-name=pat.ir
+--smtp-port=8050
+--smtp-msa-port=2551
+--pop3-port=8051
+--imap-port=8052
+--admin-port=2553
+--database=db/dirby
+--smtp-inbound-log=logs/smtp-inbound-transactions.log
+--smtp-msa-log=logs/smtp-msa-transactions.log
+--smtp-outbound-log=logs/smtp-outbound-transactions.log
+--pop3-log=logs/pop3-transactions.log
+--imap-log=logs/imap-transactions.log
+--admin-log=logs/admin-transactions.log
